@@ -6,12 +6,14 @@ const AUTHORIZE_URL = "https://x.com/i/oauth2/authorize";
 const TOKEN_URL = "https://api.x.com/2/oauth2/token";
 const ME_URL = "https://api.x.com/2/users/me";
 const TWEETS_URL = "https://api.x.com/2/tweets";
+const MEDIA_UPLOAD_URL = "https://api.x.com/2/media/upload";
 
 export const X_SCOPES = [
   "tweet.read",
   "tweet.write",
   "users.read",
   "offline.access",
+  "media.write",
 ].join(" ");
 
 export function generateCodeVerifier(): string {
@@ -126,14 +128,19 @@ export async function fetchMe(accessToken: string): Promise<{
 export async function postTweet(
   accessToken: string,
   text: string,
+  mediaIds?: string[],
 ): Promise<{ id: string; text: string }> {
+  const payload: { text: string; media?: { media_ids: string[] } } = { text };
+  if (mediaIds && mediaIds.length > 0) {
+    payload.media = { media_ids: mediaIds };
+  }
   const res = await fetch(TWEETS_URL, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ text }),
+    body: JSON.stringify(payload),
     cache: "no-store",
   });
   if (!res.ok) {
@@ -142,6 +149,44 @@ export async function postTweet(
   }
   const json = await res.json();
   return { id: json.data.id, text: json.data.text };
+}
+
+export async function uploadMedia(
+  accessToken: string,
+  mediaBuffer: Buffer,
+  mimeType: string,
+): Promise<string> {
+  const ext =
+    mimeType === "image/png"
+      ? "png"
+      : mimeType === "image/gif"
+        ? "gif"
+        : mimeType === "image/webp"
+          ? "webp"
+          : "jpg";
+  const form = new FormData();
+  form.append(
+    "media",
+    new Blob([new Uint8Array(mediaBuffer)], { type: mimeType }),
+    `media.${ext}`,
+  );
+  const res = await fetch(MEDIA_UPLOAD_URL, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${accessToken}` },
+    body: form,
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new XApiError(res.status, `media upload: ${errorText}`);
+  }
+  const json = await res.json();
+  const id =
+    json?.data?.id ??
+    json?.media_id_string ??
+    (typeof json?.media_id === "number" ? String(json.media_id) : null);
+  if (!id) throw new XApiError(500, `media upload: no id in ${JSON.stringify(json)}`);
+  return id as string;
 }
 
 export class XApiError extends Error {

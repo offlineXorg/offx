@@ -17,6 +17,7 @@ const phases: Array<{
       "Landing page + manifesto",
       "X OAuth 2.0 + phone verification",
       "SMS → tweet bridge",
+      "Photos via MMS (up to 4 per message)",
       "Rate limiting & content safety",
     ],
   },
@@ -48,7 +49,6 @@ const phases: Array<{
     status: "upcoming",
     items: [
       "Threads via multi-SMS stitching",
-      "Photos via MMS (where supported)",
       "Receive mentions & DMs as SMS",
       "Satellite SMS experiments",
     ],

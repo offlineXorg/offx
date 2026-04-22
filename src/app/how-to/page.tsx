@@ -37,6 +37,11 @@ export default function HowToPage() {
           body="Anything you text to that number becomes a tweet on your account within seconds. We append ` Via @OffXorg` to attribute the bridge. If the tweet would exceed 280 characters with the suffix, we trim your message, not the attribution."
         />
         <Step
+          n="4a"
+          title="Photos via MMS"
+          body="Attach up to 4 photos (JPG, PNG, GIF, WebP) to the same message and they ride along. Caption is optional. MMS delivery depends on your carrier, so from some networks only plain text gets through."
+        />
+        <Step
           n="5"
           title="Receive your confirmation"
           body="We reply to your SMS with the URL of the tweet we just posted. If anything fails (rate limit, token expired, content blocked), the reply tells you why in one short sentence."

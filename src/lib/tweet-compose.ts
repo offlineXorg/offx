@@ -1,9 +1,11 @@
 const SUFFIX = "\n\nVia @OffXorg";
+const ATTRIBUTION_ONLY = "Via @OffXorg";
 const ELLIPSIS = "...";
 const MAX_TWEET = 280;
 
 export function composeTweet(rawBody: string): string {
   const body = rawBody.trim().replace(/\s+/g, " ");
+  if (!body) return ATTRIBUTION_ONLY;
   const maxBody = MAX_TWEET - SUFFIX.length;
   if (body.length <= maxBody) return `${body}${SUFFIX}`;
   const trimmed = body.slice(0, maxBody - ELLIPSIS.length).trimEnd();
