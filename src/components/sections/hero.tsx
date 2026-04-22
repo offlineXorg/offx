@@ -24,7 +24,7 @@ export function Hero() {
         <div>
           <Badge variant="accent" className="mb-6">
             <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-            New · Attach photos to your SMS, they tweet too
+            New · Photos now via MMS
           </Badge>
           <h1 className="text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
             Tweet without
