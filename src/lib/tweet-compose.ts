@@ -1,4 +1,4 @@
-const SUFFIX = " Via @OffXorg";
+const SUFFIX = "\n\nVia @OffXorg";
 const ELLIPSIS = "...";
 const MAX_TWEET = 280;
 

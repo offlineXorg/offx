@@ -129,11 +129,13 @@ function HeroMockup() {
                 </div>
                 <MoreHorizontal className="h-4 w-4 shrink-0 text-muted" />
               </div>
-              <p className="mt-1 text-[15px] leading-snug text-foreground">
-                Helicopters overhead in Mashhad. Reporting for my followers
-                before this battery dies.{" "}
-                <span className="text-muted">Via @OffXorg</span>
-              </p>
+              <div className="mt-1 text-[15px] leading-snug text-foreground">
+                <p>
+                  Helicopters overhead in Mashhad. Reporting for my followers
+                  before this battery dies.
+                </p>
+                <p className="mt-3 text-muted">Via @OffXorg</p>
+              </div>
               <div className="mt-3 flex items-center justify-between text-xs text-muted">
                 <TweetAction Icon={MessageCircle} count="38" />
                 <TweetAction Icon={Repeat2} count="142" />
