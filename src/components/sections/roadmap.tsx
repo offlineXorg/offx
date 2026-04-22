@@ -26,7 +26,7 @@ const phases: Array<{
     status: "upcoming",
     items: [
       "Arabic · Farsi · Spanish · Ukrainian · French copy",
-      "Country-specific Twilio numbers",
+      "Country-specific SMS numbers",
       "Confirmation SMS in user's language",
       "Partnerships with press freedom orgs",
     ],

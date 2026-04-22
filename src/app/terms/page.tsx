@@ -78,8 +78,8 @@ export default function TermsPage() {
       </h2>
       <p>
         OffX is provided on a best-effort basis by a non-profit. We cannot
-        guarantee delivery during total network shutdowns, Twilio outages, X API
-        suspensions, or carrier-level SMS blocks. Do not rely on OffX as your
+        guarantee delivery during total network shutdowns, SMS gateway outages,
+        X API suspensions, or carrier-level SMS blocks. Do not rely on OffX as your
         sole channel in life-threatening situations.
       </p>
 

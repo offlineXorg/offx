@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowRight,
   BadgeCheck,
@@ -107,11 +108,14 @@ function HeroMockup() {
 
         <div className="rounded-2xl border border-border bg-surface-2 p-4">
           <div className="flex items-start gap-3">
-            <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-accent to-orange-700">
-              <span className="absolute inset-0 flex items-center justify-center font-mono text-sm font-semibold text-background">
-                S
-              </span>
-            </div>
+            <Image
+              src="/avatars/sara.jpg"
+              alt="Sara profile photo"
+              width={40}
+              height={40}
+              className="h-10 w-10 shrink-0 rounded-full object-cover"
+              priority
+            />
             <div className="min-w-0 flex-1">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex min-w-0 items-center gap-1 text-sm">

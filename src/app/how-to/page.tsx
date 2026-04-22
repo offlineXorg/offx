@@ -24,7 +24,7 @@ export default function HowToPage() {
         <Step
           n="2"
           title="Verify your phone"
-          body="Enter your number in E.164 format (e.g. +33612345678). We send a 6-digit code over Twilio Verify. Type it back, and your phone is now the key to your X account in our system."
+          body="Enter your number in E.164 format (e.g. +33612345678). We send you a 6-digit code by SMS. Type it back, and your phone is now the key to your X account in our system."
         />
         <Step
           n="3"

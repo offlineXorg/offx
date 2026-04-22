@@ -124,8 +124,8 @@ export function ConnectPhoneStep({ handle }: { handle: string }) {
       ) : null}
 
       <p className="mt-6 text-xs text-muted">
-        Standard carrier rates apply for the one-time SMS. We use Twilio Verify,
-        which never stores the code.
+        Standard carrier rates apply for the one-time SMS. Codes are hashed,
+        valid five minutes, and erased after you verify.
       </p>
     </div>
   );

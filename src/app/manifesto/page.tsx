@@ -99,7 +99,7 @@ export default function ManifestoPage() {
         OffX is a non-profit. Funding comes from developer fees on a Solana
         token,{" "}
         <span className="font-mono text-accent">$OFFX</span>. Every swap of the
-        token routes a fraction to our on-chain treasury, which pays the Twilio
+        token routes a fraction to our on-chain treasury, which pays the SMS
         bill, the X API bill, the domain, and the server. When the treasury
         runs out, OffX shuts down. We will tell you before it does.
       </p>

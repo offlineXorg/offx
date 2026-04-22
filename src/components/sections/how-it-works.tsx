@@ -9,7 +9,7 @@ const steps = [
   {
     n: "02",
     title: "Verify your phone",
-    body: "We send a 6-digit code via Twilio. Enter it once, it ties your phone number to your X handle on our end.",
+    body: "We send a 6-digit code by SMS. Enter it once, it ties your phone number to your X handle on our end.",
   },
   {
     n: "03",

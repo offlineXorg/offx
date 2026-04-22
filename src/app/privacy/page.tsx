@@ -15,7 +15,7 @@ export default function PrivacyPage() {
     >
       <p>
         OffX is a non-profit service that posts tweets on your X account when
-        you send an SMS to our Twilio number. This policy explains what we
+        you send an SMS to our shared number. This policy explains what we
         collect, why, where it lives, and how to erase it.
       </p>
 
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong className="text-foreground">Your phone number (E.164).</strong>{" "}
-          The lookup key when Twilio delivers us an inbound SMS. Never shared.
+          The lookup key when an inbound SMS lands on our number. Never shared.
         </li>
         <li>
           <strong className="text-foreground">A log of your SMS-tweets.</strong>{" "}
@@ -58,10 +58,10 @@ export default function PrivacyPage() {
         Where it lives
       </h2>
       <p>
-        Data is stored in a Supabase (Postgres) instance in the EU region,
-        encrypted at rest, behind row-level security. Secrets are kept in
-        Vercel&apos;s environment variables. SMS transits Twilio under their
-        standard encryption.
+        Data is stored in a Postgres instance in the EU region, encrypted at
+        rest, behind row-level security. Secrets are kept in the host&apos;s
+        encrypted environment. SMS transits a licensed global carrier under
+        its standard encryption.
       </p>
 
       <h2 className="!mt-12 text-2xl font-semibold text-foreground">
