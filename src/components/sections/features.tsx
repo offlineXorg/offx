@@ -11,8 +11,8 @@ import { Container } from "@/components/ui/container";
 const features = [
   {
     icon: Radio,
-    title: "Works without data",
-    body: "Plain GSM over your carrier's SMS channel. No Wi-Fi, no 4G, no VPN, no roaming. If a text message can leave your phone, your tweet lands.",
+    title: "Text and photos, no data",
+    body: "Plain GSM over your carrier's SMS and MMS channels. No Wi-Fi, no 4G, no VPN. If a text or a photo can leave your phone, it lands on your timeline. Up to 4 images per tweet.",
   },
   {
     icon: Timer,

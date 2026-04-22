@@ -32,9 +32,9 @@ export function Hero() {
             <span className="text-accent">internet.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-strong">
-            OffX turns SMS into tweets. You text our number, we post it on your
-            X account. Works when the app is blocked, when data is down, when
-            the only thing left on your phone is text.
+            OffX turns SMS into tweets, photos included. You text our number,
+            we post it on your X account. Works when the app is blocked, when
+            data is down, when the only thing left on your phone is a signal.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <LinkButton href="/connect" size="lg">
@@ -134,6 +134,22 @@ function HeroMockup() {
                   Helicopters overhead in Mashhad. Reporting for my followers
                   before this battery dies.
                 </p>
+                <div className="mt-3 grid h-36 grid-cols-2 gap-[2px] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/brand/mock/photo-1.jpg"
+                    alt=""
+                    width={280}
+                    height={180}
+                    className="h-full w-full object-cover"
+                  />
+                  <Image
+                    src="/brand/mock/photo-2-v2.jpg"
+                    alt=""
+                    width={280}
+                    height={180}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
                 <p className="mt-3 text-muted">Via @OffXorg</p>
               </div>
               <div className="mt-3 flex items-center justify-between text-xs text-muted">

@@ -19,7 +19,7 @@ const steps = [
   {
     n: "04",
     title: "Text to tweet",
-    body: "Send an SMS with your message. Within seconds it's a tweet on your account, signed `Via @OffXorg`. We reply with the tweet link.",
+    body: "Send an SMS with your message, or attach up to 4 photos by MMS. Within seconds it's a tweet on your account, signed `Via @OffXorg`. We reply with the tweet link.",
   },
 ];
 
