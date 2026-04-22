@@ -17,7 +17,7 @@ const groups = [
     links: [
       { href: "/manifesto", label: "Manifesto" },
       { href: "/#roadmap", label: "Roadmap" },
-      { href: "https://github.com", label: "GitHub", external: true },
+      { href: "https://github.com/offlineXorg/offx", label: "GitHub", external: true },
     ],
   },
   {

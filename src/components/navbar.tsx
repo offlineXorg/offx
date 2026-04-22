@@ -30,7 +30,7 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://github.com"
+            href="https://github.com/offlineXorg/offx"
             target="_blank"
             rel="noreferrer"
             className="transition-colors hover:text-foreground"
